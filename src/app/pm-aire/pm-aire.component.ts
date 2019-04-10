@@ -16,8 +16,9 @@ export class PmAireComponent implements OnInit {
     this.ls.getPosition().then(pos =>{
       console.log(`Positon: ${pos.lng} ${pos.lat}`);
       this.ubicacion = {
-        longitud: pos.lng,
-        latitud: pos.lat
+        longitud: pos.lng.toFixed(2),
+        latitud: pos.lat.toFixed(2),
+        color: "#1a71db"
       };
     })
   }
